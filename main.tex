@@ -1,0 +1,62 @@
+\documentclass[a4paper, twoside, 12pt]{article}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{natbib} 
+
+
+%% Sets page size and margins
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=0pt]{geometry}
+\usepackage{titlesec}
+\usepackage{pdfpages}
+%\usepackage[paper=portrait,pagesize]{typearea}
+%\usepackage{rotating}
+
+%% Useful packages for figures and tables
+\usepackage{amsmath}
+\usepackage{mhchem}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\graphicspath{ {./Figures/} }
+\usepackage{float}
+\usepackage{adjustbox}
+
+
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{tabularx}
+\usepackage{pdfpages}
+
+%\usepackage[table,xcdraw]{xcolor}
+
+%Sart of the document 
+\begin{document}
+
+\begin{titlepage}
+\includepdf[pages=-]{Cover pages/Cover Pages pdf/Cover Page - SEPARATIONS.pdf}
+\end{titlepage}
+
+
+\pagenumbering{roman}
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+
+\input{A. Main Report}
+
+
+\appendix
+\input{B. Appendix}
+
+\newpage
+\bibliographystyle{abbrv}
+\bibliography{b}
+
+\end{document}
+
+
