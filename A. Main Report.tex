@@ -1,0 +1,625 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Introduction}
+
+%The design of separator S-3 is presented in the following report. The unit consists of a vacuum filter drum (?) designed to separate R-4's liquid effluent, described in Table XX. The unit's objective is to separate the crystal product from the liquid, aiming to maximise crystal purity to ensure correct operation of the downstream reactor R-5. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{separator overview}
+% what kind of separators we have in the process
+
+The proposed design of the modified Solvay process has relatively few separation steps, performed in three different separation units from S-1 to S-3. The flash units, S-1 and S-3, are designed to operate at a specific temperature and pressure to split water from a hot CO$_2$ rich gas mixture. The former is found downstream of R-1's vapour outlet, whilst the other is found downstream of the sodium calciner R-5's vapour outlet. Both split gaseous CO$_2$ rich streams are routed to a mixer upstream of the bubble column R-4, whilst the liquid streams are either discarded as wastewater or routed to the slaker unit, R-4, to satisfy water loading requirements. The filter unit S-2 arguably is the most important separation unit of the process, designed to separate the NaHCO$_3$ crystals precipitated in the bubble column R-4. It consists of a rotary drum filter, which retains product-rich cake and permeates a liquid broth routed to other process units. The composition of the feed stream to the filter, F-38, is shown in the Table \ref{flowrates}. 
+
+%***Check names and numbering is correct.
+
+\begin{table}[H]
+\centering
+\caption{Major components and flow rates in stream F-38}
+\begin{tabular}{lcc}
+\label{flowrates}
+\hline
+\rowcolor[HTML]{E7E6E6} \textbf{Component} & \textbf{Flowrate [kmol/hr]} & \textbf{Phase} \\ \hline
+H$_2$O             & 32157.6                     & Liquid         \\ \hline
+CaCl$_2$           & 2547.3                     & Liquid         \\ \hline
+NaCl               & 241.5                       & Liquid         \\ \hline
+CaCO$_3$             & 2.5                       & Liquid         \\ \hline
+MgSO$_4$           &   33.6                    & Liquid         \\ \hline
+MgCl$_2$           &    24.1                  & Liquid         \\ \hline
+CaSO$_4$           &    29.7                   & Liquid         \\ \hline
+Ca(OH)$_2$         &   224.5                    & Liquid         \\ \hline
+Fe$_2$O$_3$           &   0.75                    & Liquid         \\ \hline
+NaHCO$_3$          &    2397.5                   & Crystal        \\ \hline
+\textbf{Total}     & \textbf{37661.2}            & \textbf{Slurry}  \\ \hline
+\end{tabular}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Novel aspects for the separation design}
+One of the largest challenges for the separation design is that high purity for sodium bicarbonate is required from filtration. In the design of Solution's A,  the purity for the final product, soda ash, should be more than 99.5\%. As soda ash is formed from the thermal decomposition of sodium bicarbonate. To reach the desired purity for the final product, the cake formed should be more than 99.5\% pure as well, excluding water. Hence, the drying and washing should be considered and carefully designed into the filtration process.
+\subsection{Separation Techniques}
+% for solid-gas separation, why belt-filter was chosen instead of flash 
+
+The choice of separator type for each unit is approached in different ways depending on the phases and components involved. As mentioned in Section \ref{separator overview}, units S-1 and S-3 are designed to split two key components, CO$_2$ and H$_2$O, into two outlets streams. In this case, Jaksland's analysis was used to chose equipment for vapour-liquid separators. To design unit S-2, heuristics were followed from \citep{Perry2008} and \citep{solidliquidseparation}.
+
+
+
+
+
+
+\subsubsection{Flash S-1 \& S-3: Jaksland's analysis}
+Jaksland analysis, described in (REF), consists of a method to evaluate vapour-liquid separations and find optimal choices for separator type. Ratios of component physical properties are calculated and compared to indicative performance values, given for each separation technique. A set of criteria classifies each technique as infeasible, feasible or good, based on an approximate ease of separation.
+
+\begin{table}[H]
+\centering
+\caption{Mixture analysis for streams before flash drums}
+    \label{tab:table1}
+\begin{adjustbox}{width=1\textwidth}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+Components     & Boiling point [K] & Melting point {[}K{]} & Solubility {[}g/L{]} & Molar Volume {[}m^3/mol{]}& Critical temp. {[}kW{]} & Molecular weight {[}kg/kmol{]} \\ \hline
+H$_2$O & 373.2            &    273.2               &       infinite            &         0.000018                     &   647.35   & 18.015           \\ \hline
+CO$_2$ &  194.7           &    216.5               &          1.449         &         0.0224                       &    304.19    & 44.01       \\ \hline
+N$_2$ &  77.36            &   63.23                &          0.0095245         &       0.0224                           &   126.2     & 14.0067         \\ \hline
+O$_2$  & 90.188             &   54.36                &         0.0055997          &       0.0224                           &    154.6   & 15.999          \\ \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+\begin{table}[H]
+\caption{Binary ratio matrix}
+    \label{tab:binary}
+\begin{adjustbox}{width=1.05\textwidth}
+\begin{tabular}{ccccccc}
+\hline
+\rowcolor[HTML]{E7E6E6}
+\textbf{Component 1}     & \textbf{Component 2} & \textbf{Boiling Point} & \textbf{Melting Point}  & \textbf{Solubility}  & \textbf{Molar Volume}  & \textbf{Critical Temperature}\\ \hline
+H$_2$O & CO$_2$     &      1.92  &    1.26         &         Infinite     & 1244.44 & 2.13   \\ \hline
+H$_2$O &   N$_2$   &    4.82    &    4.32          &        Infinite       & 1244.44  &   5.13      \\ \hline
+H$_2$O &  O$_2$   &    4.14    &     5.03           &       Infinite        & 1244.44 &  4.19         \\ \hline
+CO$_2$  & N$_2$    &    2.52  &     3.42         &        152.13        & 1  &    2.41     \\ \hline
+CO$_2$  & O$_2$    &  2.16    &     3.98        &        258.76        &  1  &    1.97    \\ \hline
+O$_2$  & N$_2$    &   1.17  &       1.16         &       1.7        &  1  &   1.23     \\ \hline
+\end{tabular}
+\end{adjustbox}
+
+\end{table}
+
+\noindent The ratio in the table above are compared with the feasible ratio, r$_{j,f}$, and the good ratio, r$_{j,g}$, of each separation technique, $j$. The ratios are classified as below:
+    \begin{Equation}
+	r_{i,j}  \ge r_{j,g}  
+	\end{Equation} 
+	Separation technique, $j$, is good for the pair $i$.
+	\begin{Equation}
+	r_{i,f} \ge r_{i,j}  \ge r_{j,g}  
+	\end{Equation}
+	 Separation technique, $j$, is feasible for the pair $i$.
+	\begin{Equation}
+	r_{i,f} \ge r_{i,j} 
+\end{Equation}
+Thus separation technique, $j$, is infeasible for the pair $i$.
+ 
+
+ \begin{table}[H]
+\centering
+\caption{Feasible and good ratio of separation techniques}
+    \label{tab:separation}
+\begin{tabular}{cccc}
+\hline
+\rowcolor[HTML]{E7E6E6}
+\textbf{Separation technique} & \textbf{r$_{j,f}$} & \textbf{r$_{j,g}$}  & \textbf{Property}\\ \hline
+Flash & 1.23     &      1.4         &         Boiling Point   \\ \hline
+Distillation   &    1.01    &    1.02 &   Boiling Point   \\ \hline
+Partial Condensation   &    1.9    &    2.15 &   Boiling Point
+\\ \hline
+\end{tabular}
+\end{table}
+
+\noindent Table \ref{tab:separation} above shows the feasible and good ratios of two selected separation techniques.
+
+
+\begin{table}[H]
+\centering
+\caption{Results of jaksland analysis}
+    \label{tab:table3}
+\begin{tabular}{ccccc}
+\hline
+\rowcolor[HTML]{E7E6E6}
+\textbf{Component 1}    & \textbf{Component 2} & \textbf{Flash} & \textbf{Distillation} & \textbf{Partial Condensation}\\ \hline
+H$_2$O & CO$_2$     &      good  &    good  & feasible \\ \hline
+H$_2$O &   N$_2$   &       good  &    good &    good     \\ \hline
+H$_2$O &  O$_2$   &         good  &    good &    good         \\ \hline
+CO$_2$  & N$_2$    &        good  &    good &    good    \\ \hline
+CO$_2$  & O$_2$    &       good  &    good &    good    \\ \hline
+O$_2$  & N$_2$    &        Infeasible  &    good &    Infeasible      \\ \hline
+\end{tabular}
+\end{table}
+
+\noindent Since the CO$_2$ is the gas with highest boiling point amongst gases, the separation method was chosen based on how good the technique is for the separation of CO$_2$ from water vapour. With this criterion, the distillation and flash separation are found to be good alternatives. Even though distillation would give a better split, a sharp separation is not needed and so a flash drum was chosen as the separation methods for gases as it is low in cost and efficient enough to separate the water from gas streams with very high purities.
+
+\subsubsection{Filter S-2: Heuristics}
+\label{s-2}
+
+Heuristics from Perry's handbook was followed for filter type determination. The first step, shown in Figure \ref{fig:my_label}, consists in determination of scale, operation and solids recovery to pick the correct type. For the proposed unit, the duty specifications are $a,e,h$ for a large and continuous filtration process with washed solids. Following the selection procedure, the candidates found were a bottom-fed vacuum rotary drum or a disc filter. From Fig.18-126\citep{Perry2008}, drum and disc filters have similar costs per area at the calculated individual area described in Section \ref{final_result}. Overall a bottom-fed rotary vacuum drum was selected out of these, as it is the most typically used filter in the existing industry \citep{rotarydrum}, and empirical correlations exist that allow for an approximate sizing of the required filtration units.
+
+\begin{figure}[h]
+    \centering
+    \label{dutyspecification}
+    \includegraphics[scale=0.7]{Figures/dutyspecification.png}
+    \caption{Duty specification for equipment selection \citep{Perry2008}}
+    \label{fig:my_label}
+\end{figure}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Detailed design of filter}
+\label{filter design}
+\subsection{Choice of detailed separator}
+In this work, S-2, sodium bicarbonate filter, is selected to be the detailed separator. The filtration for sodium bicarbonate is the most important separation process in the system, as the solid filtered out will be thermally decomposed to produce soda ash, which is the final product for the process. Hence, the purity of sodium bicarbonate has direct impacts on the purity of sodium carbonate. In contrast, flashes S-1 and S-3 have relatively low significance since the separation of water from the CO$_2$ rich air is relatively easy and simple.
+
+
+\subsection{Modelling objectives}
+\label{objectives}
+% State the objective and design specification
+In Section \ref{filter design}, the filter modelling is built based on the three objectives listed below. 
+\begin{enumerate}
+    \item To determine the full dimensions for S-2, sodium bicarbonate rotary drum filter.
+    \item To minimize the operating and equipment cost of S-2.
+    \item To increase the purity of the solid product as high as possible.
+\end{enumerate}
+Sensitivity analysis in \ref{sensitivity} investigates how different parameters put impacts on the filter performance, so the operating conditions and the size of the filter can be finalized, considering the cost and product quality. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Modelling approach}
+The equipment selection refers to Fig. 18-145 and table 18-11 in Perry’s handbook \citep{Perry2008}. For S-2, the solid product, sodium bicarbonate, is going to be further reacted to produce sodium carbonate, so washing and drying should be considered in the filtration process in order to achieve the desired purity of the final product. As explained in 1.1.2, vacuum rotary drum filter is selected to separate sodium bicarbonate. Vacuum is widely used in continuous filter to provides driving force for filtration, cake formation and drying \citep{Perry2008}.
+
+
+\subsubsection{Modelling equations for sensitivity analysis}
+\label{sensi}
+\noindent For the sizing of rotary drum filter, several parameters such as cake thickness, vacuum level which is the pressure drop should be fixed. However, the Perry's handbook \citep{Perry2008} cannot provide valid enough selection criteria on them, hence, compressible cake filtration theory is used along with the available experimental data from the book Chemical Process Equipment by James R. et al\citep{CPE}.\\
+
+\noindent In practice, cake is compressible. Hence, to estimate the full dimension for the filter, the cake resistance, $\alpha$, and porosity, $\epsilon$ should be included into the calculations, which can be obtained from the Equations below \citep{Tiller}. 
+\begin{equation}
+\alpha = \alpha_0(1+\frac{P_s}{P_a})^n
+\end{equation}
+\begin{equation}
+    (1-\epsilon) = (1-\epsilon_0)(1+\frac{P_s}{P_a})^n
+\end{equation}
+\noindent $P_s$ and $P_a$ represent surface and vacuum pressures respectively. $\alpha_0$ and $\epsilon_0$ vary with the size and shape of the particles forming the cake, which is sodium bicarbonate for our case. After cake resistance and porosity are estimated, the correlation below can be used to calculate the filtration flux.
+\begin{equation}
+    cake\;thickness = \frac{c}{\rho_s(1-\epsilon)}\frac{V}{A}
+\end{equation}
+\begin{equation}
+\label{flux Equation}
+    \frac{dV/A}{dt}=\frac{\Delta P}{\mu(R_f+R_s)}=\frac{\Delta P}{\mu(R_f +\alpha cV/A)}
+\end{equation}
+The left hand side of the Equation \ref{flux Equation} represent the filtration flux. $V$ denotes volume of filtrate and $A$ denotes filtering area. $\Delta P$ denote pressure drop which is $P_s$-$P_a$. $R_f$ and $R_c$ denote filtration resistance caused by filtrate and cake respectively. $\mu$ denote the viscosity of the feed and $c$ weight of solid / volume of liquid. $\rho_s$ is the density of the solid product. For the feed with fixed composition with certain cake thickness, the filtration flux can be integrated at the constant pressure. Hence, after rearrangement, the filtration time can be represented as the Equation below. 
+\begin{equation}
+    t_f= (b\frac{V}{A}) +\frac{c}{2}\times(\frac{V}{A})^2\frac{1}{a}
+\end{equation}
+where, 
+\begin{equation}
+    a =10^5\times\Delta P
+\end{equation}
+\begin{equation}
+     b = \mu \time R_f
+\end{equation}
+\begin{equation}
+    c = \mu \times \alpha \rho_0
+\end{equation}
+
+\noindent$\rho_0$ denotes mass of cake per hr/vol of filtrate per hr. Furthermore, the pheripheral speed of the filter can be defined as the Equation below. 
+\begin{equation}
+    n_f = frac_f/t_f
+\end{equation}
+
+\noindent$frac_f$ denotes the fraction of circumference for filter, which is equal to 0.3 for the rotary drum belt filter \citep{Perry2008}. Therefore, the diameter can be calculated as below. The equipment internals are fixed for the rotary drum belt filter, so the full dimension of the filter can be specified. 
+
+\begin{equation}
+    d = \frac{pheripheral\;speed}{\pi\times n_f}
+\end{equation}
+
+%\noindent The gas volume flow  for drying can be found from the Figure \ref{fig:18-118}, after the total dry time is determined. Therefore, the air rate based on the total cycle can be calculated, which is equal to the gas volume flow divided by the cycle time for rate-determine step.
+
+%\begin{Figure}[h!]
+%    \centering
+%    \includegraphics{PFD/18-118.png}
+%    \caption{Airflow through cake \citep{Perrys}}
+%    \label{fig:18-118}
+%\end{Figure}
+
+
+
+\subsubsection{Sizing of a vacuum rotary drum filter}
+\label{model_approach}
+% Equations used to design
+% What type of filter to be used (pg 2047 in perry)
+
+\noindent The data correlations in Perry's Chemical Engineerings' Handbook \citep{Perry2008} have been applied to size the filter area and its dimension.In a nutshell, there are three steps for filtration: cake formation, washing, and drying. For the sizing of drum filter, calculation of the time for each step is needed.\\
+
+
+\noindent To begin with, it is essential to choose the cake thickness for the calculation of the cake formation time (t$_f$). For any type of filter, it is only practical to discharge the cake, when the cake is thick enough \citep{Perry2008}. Hence, for design purpose, the cake thickness must exceed the minimum design thickness listed on table 18-8 in Perry's handbook \citep{Perry2008}. After the cake thickness is chosen, the dry cake weight (W) is obtained from Figure \ref{fig:18-111} so that the cake formation time can be determined from Figure \ref{fig:18-112}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=1]{PFD/18-111.png}
+    \caption{Dry cake weight vs. cake thickness \citep{Perry2008}}
+    \label{fig:18-111}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{18-112.png}
+    \caption{Dry cake weight vs. form time \citep{Perry2008}}
+    \label{fig:18-112}
+\end{figure}
+
+
+
+\noindent Ideally, the final cake product is desired to be entirely dry. However, as the vacuum filter operates in an open or semi-open environment \citep{Perry2008}, it is not practical to set the cake moisture to 0\%. Furthermore, sodium bicarbonate filtered out is going to be further decomposed at an extremely high temperature, hence, the moisture would not have impacts on the reaction mechanisms and purity of the final product. In our design, the final cake moisture is set to be 25\% which is practically the lowest possible level. With the chosen moisture level, dry time correlating factor can be found from Figure \ref{fig:18-115}. The final drying time can then be calculated by multiplying the dry time correlating factor with dry cake weight determined from Figure \ref{fig:18-112}.\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{PFD/18-115.png}
+    \caption{Cake moisture correlatio n\citep{Perry2008}}
+    \label{fig:18-115}
+\end{figure}
+
+\noindent For the washing time calculation, the total dissolved solid in the dry washed solid (TDS$_{d}$) and cake liquor (TDS$_{l}$) are firstly determined. For the calculation of TDS$_{d}$, cake weight (W) and percentage weight of TDS in dry solid, 0.5 wt\%, were used in Equation \ref{RR1}. 
+
+%and the Figure \ref{fig:18-116} is then used to determine the wash ratio which can be used to determine wash ratio and the wash time respectively.\citep{Perrys}.\\
+
+\begin{equation}
+    TDS_{d}=W \frac{0.005}{1-0.005}\\
+    \label{RR1}
+\end{equation}
+
+\noindent wt\% of TDS$_{d}$ and TDS$_{l}$ are then calculated as shown below. TDS$_{l,wt}$ is calculated by using dry cake wight (W), TDS$_{d}$ and cake moisture, 25\% in Equation \ref{RR4}.
+
+\begin{equation}
+    TDS_{d, wt\%}=\frac{TDS_{d}}{W}\times 100\\
+    \label{RR3}
+\end{equation}
+\begin{equation}
+    TDS_{l, wt\%}=\frac{TDS_{d}}{\frac{W}{\frac{1}{0.25}-1}}\times 100\\
+    \label{RR4}
+\end{equation}
+
+\begin{equation}
+    \frac{R}{100}=\frac{C_2-C_w}{C_1-C_w}=\frac{TDS_{l, wt\%}}{TDS_{feed, wt\%}}
+    \label{RR}
+\end{equation}
+
+
+
+\noindent R denotes percentage solute remaining after washing. $C_2$ denotes solute concentration in washed cake liquid. $C_1$ denotes solute concentration in unwashed cake liquid, which is the solute composition of feed inlet and can be obtained directly from Aspen. $C_w$ denotes solute concentration in wash liquid, which is 0 for our case as the waste water with purity 99.9\% is reused as washing water for filtration. From Figure \ref{fig:18-116}, washing ratio, N, can be determined, which represents the best washing can be done in the filtration process \citep{Perry2008}. For design purpose, extra 10\% should be added into calculation \citep{Perry2008}. Then, wash time can be found from Figure \ref{fig:18-117}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.9]{PFD/18-116.png}
+    \caption{Wash effectiveness \citep{Perry2008}}
+    \label{fig:18-116}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{PFD/18-117.png}
+    \caption{Cake wash time correlation \citep{Perry2008}}
+    \label{fig:18-117}
+\end{figure}
+
+\noindent Since cake formation, wash and drying times are all calculated above, the total filter area can be calculated once the \% of each step taking part in the drum circumference is determined. For a typical vacuum rotary drum belt filter, the apparent submergence for cake formation should be 35\% of the cricumference and the maximum effective submergence should be 30\% \citep{Perry2008}. The maximum washing cycle should be 29\% of the total cycle \citep{Perry2008}. The cycle time for each step i can be calculated as shown in the Equation \ref{CT} and the rate-controlling step can be identified by comparing the cycle time for each step. \\
+
+\begin{equation}
+    CT_{i}=\frac{t_{i}}{\frac{\%_{step, i}}{100}}
+    \label{CT}
+\end{equation}
+
+
+\noindent The data correlations applied above are only for bench-scale filtration \citep{Perry2008}. Scale-up factors should be incorporated to convert the process to the commercial scale. For vacuum rotary drum belt filter, the scale-up on rate is 0.9 and 1 on cake discharge and actual area \citep{Perry2008}. Hence, the overall scale-up factor can be determined, which is equal to $0.9\times1.0\times1.0=0.9$ \citep{Perry2008}.\\
+
+\noindent Therefore, the design filtration rate of sodium bicarbonate can be calculated, as shown on the Equation below.
+\begin{equation}
+    r = \frac{W\times60\times Overall\;Scale \;up\;factor }{CT_{w}+CT_{d}}
+\end{equation}
+\noindent $r$ denotes design filtration rate in $kg/h\times m^2$. $W$ denotes dry cake weight in $kg/m^2 \cdot cycle$. $CT_{w,d}$ denotes cycle time for wash and dry steps.  The mass flowrate of solid outlets for filters are estimated from Aspen. Hence, the filter area can be calculated using the Equation below.
+
+\begin{equation}
+    Filter\;area = \frac{mass\;flowrate\;of\;NaHCO_3}{r}
+\end{equation}
+
+\noindent The power supply for each pump involved in the filtration process can be simply estimated from equation below, in which pump capacity is related to the corresponding flow rate obtained from Aspen modelling. Further explained for each pump respectively will be provided in section \ref{pump}. 
+\begin{equation}
+    Power\;supply = Pressure\;drop\times Pump\; capacity
+\end{equation}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\subsubsection{Model input}
+
+The inputs for the section \ref{sensi} are following.
+
+\begin{table}[h!]
+\centering
+\caption{Input data for the section \ref{sensi}}
+\begin{tabular}{cccc} 
+\hline
+Input & Unit & Value & Equation used  \\ 
+\hline
+\alpha$_0$ & m/kg & 11 \citep{Tiller}& Eq.4 \\ 
+\hline
+P$_s$ & bar & 1 \citep{Tiller}& Eq.4, 5 \\ 
+\hline
+P$_a$ & bar  & 0.47 \citep{Tiller}&  Eq.4, 5 \\ 
+\hline
+\epsilon$_0$  & -  & 0.8 \citep{Tiller}& Eq.5\\ 
+\hline
+n     & -  & 0.15 \citep{Tiller}&    Eq.4, 5  \\
+\hline
+\mu    & N hr/m2 & 2.778 \times 10$^{-7}$ &   Eq.10, 11  \\
+\hline
+R$_f$    & 1/m &  1\times 10$^{-7}$ \citep{Tiller}&   Eq.10, 11  \\
+\hline
+Peripheral speed    & m/h & 60&   Eq.13 \\
+\hline
+\end{tabular}
+\end{table}
+
+\noindent The viscosity, $\mu$, is assumed to be same as that of water since experimental data is not available.
+Filter resistance, R$_f$, is chosen within its typical range as it does not have significant impact on the filter design. The resistance is dominated by the cake. \\
+
+
+\noindent The inputs for the Section \ref{model_approach} are following.
+
+\begin{table}[h!]
+\centering
+\caption{Input data for the section \ref{model_approach}}
+\begin{tabular}{cccc} 
+\hline
+Input & Unit & Value & Equation used  \\ 
+\hline
+W & kg/m^2 cycle & 12.5 & Eq.14, 15, 16, 19 \\ 
+\hline
+TDS_{feed, wt\%} & wt\% & 35.87 & Eq.17 \\ 
+\hline
+t$_f$ & min & 0.48 & Eq.18 \\ 
+\hline
+t$_w$ & min & 0.38 & Eq.18 \\ 
+\hline
+t$_d$ & min & 0.5 & Eq.18 \\ 
+\hline
+\%$_{step,f}$ & \% & 30 & Eq.18 \\ 
+\hline
+\%$_{step,w}$ & \% & 29 & Eq.18 \\ 
+\hline
+\%$_{step,d}$ & \% & 8.5 & Eq.18 \\ 
+\hline
+Overall Scale up factor & - & 0.9 & Eq.19 \\ 
+\hline
+\end{tabular}
+\end{table}
+
+\noindent TDS$_{feed, wt\%}$ is obtained from the feed stream in the Aspen. The most commonly used \%$_i$ values are used for our study \citep{Perry2008}.
+
+ \subsubsection{Assumption and limitation}
+
+The data correlations applied in \ref{model_approach} are built based partly on empirical observations \citep{Perry2008}, which means many assumptions have been made to size the filter. Firstly, in Figure \ref{fig:18-111}, there is a linear relationship between the cake thickness and dry cake weight. However, material is compressible, so the curvature of the line depends on the porosity and the vacuum level meaning that there is no guarantee that sodium bicarbonate cake will behave as shown in the Figure \ref{fig:18-111}.\\
+
+\noindent Besides, for Figure \ref{fig:18-112} , the slope of the line is 0.5. In reality, the slope varies with cake resistance, which is highly related to the type of compounds forming cake \citep{Perry2008}, so the accuracy decreases.  Furthermore, the correlation factor for washing found from Figure \ref{fig:18-115} is not a generalized factor \citep{Perry2008}, which means the factors actually vary with operation conditions , such as the level of vacuum. However, for the modelling in \ref{model_approach}, the operation conditions are not taken into considerations for washing, so errors can be made.\\
+
+\noindent Finally, due to the lack of experimental data, the cake resistance and porosity for sodium bicarbonate are assumed to be same as calcium carbonate \citep{Tiller}. The assumption is made, based on the fact that the two compounds have similar molecular weight, sizes and the functional group, carbonate. Furthermore, the TDS$_l$ calculation with the calcium carbonate porosity of 0.8 showed that calcium carbonate particle can show a similar trend as in the Figure \ref{fig:18-111}. With the assumption that sodium bicarbonate behaves similar to calcium carbonate the Figure \ref{fig:18-111} is applicable for our study. Still, in order to evaluate the performance of the filter accurately, experiments should be carried out to investigate the properties of the cake formed. 
+
+\subsection{Rotary Drum design}
+
+\subsubsection{Sensitivity analysis}
+\label{sensitivity}
+\noindent As mentioned in \ref{objectives}, the overall cost for the filtration is aimed to be minimized, while the purity of the solid filtered out should not be as high as possible.  At this section, several parameters are investigated to examine their impacts on the filter performance and so the cost for the filtration process. \\
+
+\noindent To reduce the total equipment cost, the number of filters required should be minimised, therefore, the largest possible diameter of the drum sold in the market is selected for our process. To reduce the operating cost, low filter rotation speed and low pressure drop are desired. This is because the rotation speed affects motor speed and electricity cost, while pressure drop affects the vacuum pump cost directly. \\
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.65]{PFD/pd_rph.png}
+    \caption{Filter rotation speed vs filter resistance}
+    \label{fig:sensi1}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.65]{PFD/sensi2.png}
+    \caption{Drum Diameter vs Pressure difference}
+    \label{fig:sensi2}
+\end{figure}
+
+
+\noindent From Figure \ref{fig:sensi1} and \ref{fig:sensi2}, it can be concluded that the high cake thickness is better as it reduces rotation speed (rph) and leads to higher drum diameter at constant pressure difference, so less number drum filters and electricity power are required for the filtration. However, the thickness of 0.015m cannot be used in practice, because the resultant drum diameter will exceed the largest drum size sold in the market which has diameter of 3.68m (12 ft) \citep{CPE}. Hence the thickness of 0.01 m is chosen, as 0.0075m has greater rotation speed (rph) and smaller diameter for a given pressure difference. From the Figure \ref{fig:sensi2} ,at diameter of 3.66m, the pressure drop is 0.53 bar. Therefore, this diameter of 3.66m was chosen for the design.\\
+
+
+
+\noindent After the filter diameter and cake thickness are determined, the impacts of filter resistance on the filtration process are further studied. The Figure \ref{fig:sensi3} shows that high resistance of filter reduces the rotation speed (rph). However, for the chosen cake thickness of 1cm, there is almost no impact on the rotation speed as the cake thickness is not thin enough. Furthermore, by comparing Figure \ref{fig:sensi3} and \ref{fig:sensi4}, it can be concluded that cake thickness is a more dominant factor that affects rotation speed compared to the pressure drop, but for our case of 0.53 bar and 1 cm, the impact of filter resistance on rotation speed is negligible.   
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.65]{PFD/sensi3.png}
+    \caption{Rotation speed vs Filter resistance}
+    \label{fig:sensi3}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.65]{PFD/sensi4.png}
+    \caption{Rotation speed vs Filter Resistance}
+    \label{fig:sensi4}
+\end{figure}
+
+
+
+\newpage
+
+\subsubsection{Final design & evaluation}
+\label{final_result}
+
+% sizes & OP conditions
+\noindent This section summarize the full dimensions and operating conditions for the S-2. The total filtration area of 700.2 $m^2$ is calculated, using the data correlations listed in section \ref{model_approach} and the diameter of 3.68m is chosen explained in section \ref{sensitivity}. Rotary drum belt filter is used in our process, so the width, w, is calculated following Equation \ref{eq_width} below. 
+
+\begin{equation}
+    w = \frac{A}{\pi D}
+    \label{eq_width}
+\end{equation}
+
+\noindent The width calculated is equal to 60.6m, which exceeds the largest commercial size sold in the market, 7.32m (24ft) \citep{CPE}. Hence, 9 Units of rotary drum filters are needed when 8.27 is rounded up and will be implemented in parallel. The final design for sodium bicarbonate filter is provided below. 
+
+\begin{table}[h!]
+\centering
+\caption{Size for S-2 filter}
+\begin{tabular}{ccc} 
+\hline
+\textbf{Description}        & Units     & Value  \\ 
+\hline
+\textbf{Total filter area} & m$^2$ & 700.2  \\ 
+\hline
+\textbf{Diameter}          & m  & 3.68    \\ 
+\hline
+\textbf{Width~}            & m  & 7.32  \\ 
+\hline
+\textbf{Number of filters~} &  -  & 9       \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Operating condtion for S-2 filter}
+\begin{tabular}{ccc} 
+\hline
+\textbf{Description}        & Units     & Value  \\ 
+\hline
+\textbf{Pressure drop}        & bar~      & 0.53  \\ 
+\hline
+\textbf{Cake thickness~}      & m         & 0.01  \\ 
+\hline
+\textbf{Rotation speed~}      & rev/hr    & 0.52  \\ 
+\hline
+\textbf{Air rate for drying~} & m$^3$/m$^2$\times min & 0.83  \\
+\hline
+\textbf{Washing water flow rate} & kg/h & 15452.7  \\
+\hline
+
+\end{tabular}
+\end{table}
+
+\noindent The process diagram for S-2 filtration system is provided in figure \ref{fig:processdiagram}, indicating that 9 same filter unit will be implemented in parallel and the detailed process flow diagram for one filter is provided in figure \ref{fig:pfdfor1}. The stream table for S-2 filtration system is provided in table \ref{streamtable}. To obtain the flowrate for each filter, the flowrates listed in table \ref{streamtable} should be equally divided by the number of filters applied, which is equal to 9.  
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.3]{PFD/9filters.pdf}
+    \caption{Process flow diagram for S-2 filtration system (9 filters) in parallel}
+    \label{fig:processdiagram}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale = 0.6]{PFD/1filter.pdf}
+    \caption{Process flow diagram for one rotary vacuum drum filter (S-2) }
+    \label{fig:pfdfor1}
+\end{figure}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale = 0.3]{Figures/geometry3.png}
+    \caption{Front and side views of a rotary drum filter}
+    \label{fig:geo2}
+\end{figure}
+
+
+\begin{table}[]
+\centering
+\caption{Stream table for S-2}
+\begin{tabular}{cccccc}
+\hline
+      &        & \textbf{Feed}   & \textbf{Filtrate}& \textbf{Cake}   & \textbf{Washing Water} \\
+\hline
+\textbf{Total}   & kmol/h & 36994.8 & 31717.1  & 6136.1 & 858.5         \\
+\hline
+\textbf{CaCO$_3$}   & kmol/h & 2.4     & 0.0      & 2.4    & 0             \\
+\hline
+\textbf{WATER}   & kmol/h & 31543.4 & 28684.0  & 3717.9 & 858.5         \\
+\hline
+\textbf{Ca(OH)$_2$} & kmol/h & 124.9   & 124.9    & 0.0    & 0             \\
+\hline
+\textbf{NaCl}    & kmol/h & 241.4   & 241.4    & 0.0    & 0             \\
+\hline
+\textbf{CaCL$_2$}   & kmol/h & 2577.0  & 2577.0   & 0.0    & 0             \\
+\hline
+\textbf{NaHCO$_3$}  & kmol/h & 2412.9  & 0.0      & 2412.9 & 0             \\
+\hline
+\textbf{MgSO$_4$}   & kmol/h & 33.9    & 33.9     & 0.0    & 0             \\
+\hline
+\textbf{CaSO$_4$}   & kmol/h & 30.0    & 30.0     & 0.0    & 0             \\
+\hline
+\textbf{SiO$_2$}    & kmol/h & 2.1     & 0.0      & 2.1    & 0             \\
+\hline
+\textbf{Fe$_2$O$_3$}   & kmol/h & 0.8     & 0.0      & 0.8    & 0             \\
+\hline
+\textbf{MgCl$_2$}   & kmol/h & 26.0    & 26.0     & 0.0    & 0 \\
+\hline
+\end{tabular}
+\label{streamtable}
+\end{table}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Physical Design}
+
+\subsection{Integration into process}
+
+As it is shown in the section \ref{final_result}, 9 rotary vacuum drum filters have to be parallelly integrated into the process to separate sodium bicarbonate. Since the separation process does not require high temperature or high pressure, filters simply have to be connected to the system and the integration is not difficult. For high reliability of the separation system, each filter will have separate pumps for their feed and filtrate streams instead of using only 2 pumps for 9 filters. By doing so, even if a pump fails for one filter, other filters will be able to operate without being affected by the failed pump of other filter. Each filter requires accessory components such as pumps, pipes, valves, agitators and supports.
+
+
+\subsection{Cake discharge selection}
+
+For rotary vacuum filter, typical mechanisms for cake discharge are endless belt, scraper, roll, string, and pre-coat \citep{Rvfdesign}. The mechanism is selected based on the properties of cake formed. In Solution A' s design, cake thickness is chosen to be 10mm and the cake is mainly made from sodium bicarbonate, which are non-sticky fine precipitates. According to Perry's chemical engineering handbook \citep{Perry2008}, scraper would be the best cake discharge method. Filter cake knife cut should be analysed to optimise the filter efficiency and to avoid insufficient cut and excessive cut, however, it requires experimental data and actual rotary drum filter \citep{Rvfdesign}.
+
+\subsection{Heat and washing water requirements}
+\noindent The rotary drum filter operates at the room temperature hence, there is no heating or cooling needed in the system.\\
+
+\noindent With the figure 6, the total flow rate of washing water needed for 9 rotary drums is calculated to be 15452.7 kg/h. As there is a stream of waste water  produced by condensation of the water vapour in DSR calciners, it can be used as washing water of the filter. This is possible since the waste water stream has a purity of 99.99\% and the  impurity is carbon dioxide.
+
+
+\subsection{Pump selection and power requirements}
+\label{pump}
+\noindent Conventionally, each rotary drum filter requires two separate pump units. A liquid ring vacuum pump provides vacuum source and a filtrate pump to transport the liquid from the vacuum receiver, which is usually centrifuge pump \citep{Rvfdesign}. In our design, 9 filters are applied for the sodium bicarbonate filtration, so 9 vacuum pumps and 9 centrifuge pumps are required for the system. For the vacuum filter, the pump capacity can be calculated from the filtration area obtained in section \ref{final_result}. For vacuum filtration, the vacuum pump capacity is around 0.2 to 0.3 CFM per square foot of filter area \citep{Rvfdesign}. Hence, the pump capacity is calculated to be 38.7 l/s. The pressure drop, vacuum level, is determined from sensitivity analysis, which is equal to 0.53 bar. Hence, the power supply is estimated by multiplying pressure drop with the pump capacity, which is 2.05 kw per pump. For the filtrate pump, normally the pump operate in the range of  2.1 to 3 kilowatt per ton per hour \citep{pump}, so the power supply for each filtrate pump is estimated to be 272.424kw. \\
+
+\noindent The motor is used for the rotation of the drum filter, however, The calculation of power consumption cannot be carried out accurately due to lack of data on the typical mass of the filter and due to a wide ranges of the design of rotary drum filter. However, using the technical data provided by ANDRITZ \citep{AND} it can be estimated that each of our filter will consume more than 50 kW for the drum drive.
+
+\subsection{Slurry tank requirement}
+
+
+
+
+\subsection{Material Selection}
+% What kinda filter fabric are we gonna use
+In Solution A's design, vinylon is selected as the filter cloth, which is one of the typical woven media used in rotary vacuum filter \citep{cloth}. For scraper discharge filter in particular, the filter cloth is required to provide desired filtrate clarity, good wear resistance, good resistance to solids blinding and good cake release for the the filter to operate efficiently\citep{Rvfdesign}.  The vinylon filter cloth has an advantage on its excellent abrasive resistance \citep{cloth}, so it perfectly meets the requirements for the filter cloth of rotary scraper-discharge vacuum filter. Furthermore, the filters work at highly caustic conditions due to  Ca(OH)$_2$ in the feed and filtrate. The vinylon filter cloth has the excellent resistance to alkali, which effectively reduces the potential damages to the cloth \citep{cloth}. Finally, as it is shown from the Figure \ref{fig:sensi3} the resistances of most of the filter clothes show minimal impact on the efficiency of the drum filter for the given cake thickness, hence the cloth resistance is not an important factor that affects the decision on what filter cloth to be used. For the drum support, cake knife and slurry tank, which contact the basic feed streams are basic, stainless steel which is very resistant to the pH above 7 is chosen to be used.
+%nickel-molybdenum-chromium alloy which is very resistant to the pH above 7 is chosen.
+
+%https://www.filtercloths.org/technology/select-filter-cloth.html
+
+
+
+\section{Conclusion}
+In this work, S-2, sodium bicarbonate separator, is chosen to be the detailed-design separator. Sodium bicarbonate is insoluble at the operating condition, so the process is simply a solid-liquid separation and filtration is applied. Following the heuristics from Perry's handbook \cite{Perry2008}, rotary vacuum drum filter is selected, in which vacuum provides driving force for the filtration process and facilities cake washing and drying. The difficult aspect of the design is that the purity of sodium bicarbonate filtered out should be more than 99.5\% excluding water, as the cake formed is going to be further decomposed to produce soda ash, which is the final product for the system. Therefore, the efficiency of the S-2 filtration can directly put impacts on the quality of the final products. To model the filtration process, equations on section \ref{sensi} are applied to determine the level of vacuum, drum rotation speed and drum diameter optimizing the filter performance while minimizing the operating and capital costs. Then, the data correlations from \citep{Perry2008} are applied to find the total filtration area, air flow rate for drying and washing water flow rate. Hence, the full filter dimensions and the operating conditions can be finalized. However, data correlations from Perry's handbook \citep{Perry2008} are built partly on empirical observations, so experiments must be done to further study the properties of the cake formed to increase the accuracy of the model built. Overall, considering the commercial size of the rotary vacuum drum filter in the industry, 9 rotary vacuum drum filters are implemented in parallel to the system. The mechanism for cake discharge is selected based on the cake thickness and the cloth is chosen based on the properties of the feed. In future, further study can be done to obtain the experimental data and evaluate assumptions made for the calculation. Using the experimental data, optimisation of the filter can be carried out. For instance, filter knife cut analysis can be done to achieve the optimum knife cut where the filter efficiency is the highest \citep{Rvfdesign}.
+
+
+
+

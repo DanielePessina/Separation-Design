@@ -1,13 +1,23 @@
-\documentclass[a4paper, twoside, 12pt]{article}
+\documentclass[a4paper, twoside, 12pt, table]{article}
 
 %% Language and font encodings
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{helvet}
+%\renewcommand{\familydefault}{\sfdefault}
 \usepackage{natbib} 
 
+% fonts
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text}
+
+\setmainfont
+[Path=./A_fonts/, BoldFont=calibrib.ttf,
+ItalicFont=calibrii.ttf,
+BoldItalicFont=calibriz.ttf]
+{calibri.ttf}
+\newfontfamily\headingfont[Path=./A_fonts/, ItalicFont=calibrili.ttf]{calibril.ttf}
 
 %% Sets page size and margins
 \usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=0pt]{geometry}
@@ -24,14 +34,24 @@
 \graphicspath{ {./Figures/} }
 \usepackage{float}
 \usepackage{adjustbox}
+\usepackage{pdflscape}
 
-
+\setlength {\marginparwidth}{2cm}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{tabularx}
 \usepackage{pdfpages}
+\usepackage{wrapfig}
+\usepackage{threeparttable}
+\usepackage{caption}
+\captionsetup{font=footnotesize, textfont=it, labelfont={it,bf}}
 
-%\usepackage[table,xcdraw]{xcolor}
+\usepackage{lscape}
+\usepackage{multirow}
+%\usepackage[paper=portrait,pagesize]{typearea}
+\usepackage{rotating}
+\usepackage{longtable}
+\usepackage[normalem]{ulem}
 
 %Sart of the document 
 \begin{document}
@@ -48,49 +68,6 @@
 \pagenumbering{arabic}
 
 \input{A. Main Report}
-\section{Introduction}
-
-
-\subsection{Novel and difficult aspects of the design}
-
-
-\section{Choice of Separator}
-\subsection{ Selection of Separation Techniques }
-
-
-
-\subsection{Selection of Detailed Design}
-
-\section{Detailed design of Chiller}
-\subsection{Liquid vapor separation}
-
-\subsection{Chiller capacity calculation}
-
-\subsection{Sizing}
-
-\subsection{Condenser selection}
-
-\subsection{Optimization of design}
-
-\subsection{Sensitivity analysis}
-
-\subsection{Final design & evaluation }
-
-\section{Physical design}
-
-\subsection{Integration into process}
-
-\subsection{Pump selection and power requirements}
-
-\subsection{Material selection}
-
-\section{Additional consideration}
-\subsection{safety}
-
-\section{Conclusion}
-
-
-
 
 \appendix
 \input{B. Appendix}
